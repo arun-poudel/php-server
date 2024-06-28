@@ -25,9 +25,17 @@ For this repo, all the code related to your project should be place under `./ser
 
 ### Run the docker server
 
-To run the docker server just do
+Before running make sure to copy the content of `.env-example` in a new `.env` file.
 
-```bash
+For linux user
+
+```
+cp .env-example .env
+```
+
+Then just do
+
+```
 make services
 ```
 
@@ -37,6 +45,6 @@ make services
 
 To close the server just do
 
-```bash
+```
 make services.stop
 ```
