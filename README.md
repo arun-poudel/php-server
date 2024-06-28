@@ -13,11 +13,7 @@ Before you begin, ensure you have Docker and Docker Compose installed on your sy
 
 ### Clone the repository
 
-Clone this repository on you local using git clone command.
-```bash
-git clone <repository-url>
-cd <repository-directory>
-```
+Fork this repository to your own repo.
 
 ### Write you code
 
@@ -40,6 +36,20 @@ make services
 ```
 
 #### Note: Don't forget to close the server at the end.
+
+### Access the services
+
+One the server is up and running you can access the respective services as:
+
+#### View your PHP pages
+
+You can see your php pages at [localhost:8000](localhost:8000)
+
+#### View phpMyAdmin
+
+Goto [localhost:8080](localhost:8080)
+
+Use the `MYSQL_USER` and `MYSQL_PASSWORD` from your `.env` file to login.
 
 ### Close the docker server
 
