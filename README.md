@@ -29,6 +29,14 @@ For linux user
 cp .env-example .env
 ```
 
+#### Build docker image (one time use only)
+
+For the very first use please make sure to build the docker image.
+
+```
+make build
+```
+
 Then just do
 
 ```
