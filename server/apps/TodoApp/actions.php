@@ -12,18 +12,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["todo"])) {
 		$stmt->execute();
 		$stmt->close();
 	}
+
+	// Redirect to prevent re-submission on refresh
+	header('Location: ../../index.php');
 }
 
 // Handle delete request
-if (isset($_GET['delete'])) {
-	$id = intval($_GET['delete']);
+if ($_SERVER['REQUEST_METHOD'] === "DELETE") {
+	$data = json_decode(file_get_contents('php://input'), true);
+	$id = $data['id'];
 	$stmt = $conn->prepare("DELETE FROM todos WHERE id = ?");
 	$stmt->bind_param("i", $id);
 	$stmt->execute();
 	$stmt->close();
+
+	echo json_encode($data);
 }
 
-// Redirect to prevent re-submission on refresh
-header('Location: ../../index.php');
+
 
 $conn->close();

@@ -1,3 +1,3 @@
 <?php
 
-include './apps/TodoApp/todo.php';
+include './apps/TodoApp/todo.html';
