@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="../../assets/todo.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo App</h1>
+        <form action="/apps/TodoApp/actions.php" method="post">
+            <input type="text" name="todo" placeholder="Enter a new todo" required>
+            <input type="submit" value="Add Todo">
+        </form>
+
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/apps/TodoApp/todoList.js"></script>
+</body>
+
+</html>
